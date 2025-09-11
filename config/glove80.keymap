@@ -18,7 +18,7 @@
 
 / {
     behaviors {
-        
+
         // Switch to a layer if a key is held
         lh: layer_hold {
             compatible = "zmk,behavior-hold-tap";
@@ -103,7 +103,7 @@
         symbols_layer {
             bindings = <
             &trans            &trans              &trans          &trans                    &trans                                                                                                       &trans  &trans       &trans   &trans  &trans
-            &trans            &trans              &trans          &trans                    &trans                    &kp trans                                                                 &trans   &trans  &trans       &trans   &trans  &trans
+            &trans            &trans              &trans          &trans                    &trans                    &trans                                                                    &trans   &trans  &trans       &trans   &trans  &trans
             &trans            &kp EXCLAMATION     &kp CARET       &kp LEFT_BRACE            &kp RIGHT_BRACE           &kp TILDE2                                                                &none    &none   &none        &none    &none   &none
             &trans            &kp AT_SIGN         &kp DOLLAR      &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS     &kp GRAVE                                                                 &none    &none   &BACKSLASH   &PIPE2   &none   &none
             &trans            &kp PERCENT         &AMPERSAND      &kp LEFT_BRACKET          &kp RIGHT_BRACKET         &kp HASH       &trans      &trans      &trans      &trans      &trans     &none    &none   &none        &none    &none   &none
