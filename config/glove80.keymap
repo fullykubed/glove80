@@ -18,6 +18,9 @@
 #define MEDIA 3
 #define MAGIC 4
 
+// vars
+#define COMBO_TERM 50
+
 / {
     behaviors {
 
@@ -45,13 +48,13 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TERM>;
             key-positions = <37 38>;
             bindings = <&kp ESC>;
             layers   =  <DEFAULT>;
         };
-        combo_esc {
-            timeout-ms = <50>;
+        combo_equal {
+            timeout-ms = <COMBO_TERM>;
             key-positions = <41 42>;
             bindings = <&kp EQUAL>;
             layers   =  <DEFAULT>;
