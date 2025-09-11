@@ -29,7 +29,7 @@
         lh: layer_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
             bindings =  <&mo>, <&kp>;
             display-name = "Layer-Hold";
@@ -39,8 +39,9 @@
         mh: mod_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
+            require-prior-idle-ms = <100>;
             bindings =  <&kp>, <&kp>;
             display-name = "Mod-Hold";
         };
