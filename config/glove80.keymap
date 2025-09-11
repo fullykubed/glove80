@@ -25,7 +25,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&mo>;
+            bindings =  <&mo>, <&kp>;
             display-name = "Layer-Hold";
         };
 
@@ -95,7 +95,7 @@
             &kp LG(LA(LC(LSHIFT)))      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7          &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp LG(LSHIFT)              &kp Q    &kp W       &kp E       &kp R       &kp T                                                                      &kp Y   &kp U           &kp I       &kp O       &kp P       &kp BSLH
             &kp LMETA                   &kp A    &kp S       &kp D       &kp F       &kp G                                                                      &kp H   &kp J           &kp K       &kp L       &kp SEMI    &kp SQT
-            &kp LG(LALT)                &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp LCTRL   &none     &kp LGUI  &kp RCTRL &kp RSHFT    &kp N   &lh M SYMBOLS   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
+            &kp LG(LALT)                &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp LCTRL   &none     &kp LGUI  &kp RCTRL &kp RSHFT    &kp N   &lh SYMBOLS M   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
             &magic MAGIC 0              &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp SPACE   &kp RET     &kp TAB   &kp RALT  &kp DEL   &kp BSPC             &kp UP          &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
