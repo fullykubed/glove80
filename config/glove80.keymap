@@ -15,7 +15,8 @@
 #define DEFAULT 0
 #define SYMBOLS 1
 #define NUMBERS 2
-#define MAGIC 3
+#define MEDIA 3
+#define MAGIC 4
 
 / {
     behaviors {
@@ -92,12 +93,12 @@
 
         default_layer {
             bindings = <
-            &kp F1                      &kp F2   &kp F3      &kp F4      &kp F5                                                                                             &kp F6  &kp F7          &kp F8      &kp F9      &kp F10
-            &kp LG(LA(LC(LSHIFT)))      &kp N1   &kp N2      &kp N3      &kp N4              &kp N5                                                                         &kp N6  &kp N7          &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp LG(LSHIFT)              &kp Q    &kp W       &kp E       &kp R               &kp T                                                                          &kp Y   &kp U           &kp I       &kp O       &kp P       &kp BSLH
-            &kp LMETA                   &kp A    &kp S       &kp D       &kp F               &kp G                                                                          &kp H   &kp J           &kp K       &kp L       &kp SEMI    &kp SQT
-            &kp LG(LALT)                &kp Z    &kp X       &kp C       &lh NUMBERS V       &kp B      &kp LSHFT   &kp LCTRL   &none     &kp LGUI  &kp RCTRL &kp RSHFT     &kp N   &lh SYMBOLS M   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
-            &magic MAGIC 0              &kp HOME &kp END     &kp LEFT    &kp RIGHT                      &kp SPACE   &kp RET     &kp TAB   &kp RALT  &kp DEL   &kp BSPC              &kp UP          &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            &kp F1                      &kp F2          &kp F3      &kp F4      &kp F5                                                                                             &kp F6  &kp F7          &kp F8      &kp F9      &kp F10
+            &kp LG(LA(LC(LSHIFT)))      &kp N1          &kp N2      &kp N3      &kp N4              &kp N5                                                                         &kp N6  &kp N7          &kp N8      &kp N9      &kp N0      &kp MINUS
+            &kp LG(LSHIFT)              &kp Q           &kp W       &kp E       &kp R               &kp T                                                                          &kp Y   &kp U           &kp I       &kp O       &kp P       &kp BSLH
+            &kp LMETA                   &kp A           &kp S       &kp D       &kp F               &kp G                                                                          &kp H   &kp J           &kp K       &kp L       &kp SEMI    &kp SQT
+            &kp LG(LALT)                &kp Z           &kp X       &kp C       &lh NUMBERS V       &kp B      &kp LSHFT   &kp LCTRL   &none     &kp LGUI  &kp RCTRL &kp RSHFT     &kp N   &lh SYMBOLS M   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
+            &magic MAGIC 0              &lh MEDIA HOME  &kp END     &kp LEFT    &kp RIGHT                      &kp SPACE   &kp RET     &kp TAB   &kp RALT  &kp DEL   &kp BSPC              &kp UP          &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
 
@@ -123,6 +124,16 @@
             >;
         };
 
+        media_layer {
+            bindings = <
+            &trans            &none               &none                     &none                   &none                                                                                                        &none                &none             &none           &none              &none   
+            &trans            &none               &none                     &none                   &none           &none                                                                  &none                 &none                &none             &none           &none              &none
+            &trans            &none               &none                     &none                   &none           &none                                                                  &none                 &none                &none             &none           &kp C_PLAY_PAUSE   &none
+            &trans            &none               &none                     &none                   &none           &none                                                                  &kp C_FAST_FORWARD    &kp C_VOLUME_DOWN    &kp C_VOLUME_UP   &kp C_REWIND    &none              &none
+            &trans            &none               &none                     &none                   &none           &none       &none      &none      &none      &none      &none          &none                 &kp C_MUTE           &none             &none           &none              &none
+            &none             &none               &none                     &none                   &none                       &none      &none      &none      &none      &none                                &none                &none             &none           &none              &none
+            >;
+        };
 
         magic_layer {
             bindings = <
