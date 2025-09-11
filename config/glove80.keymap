@@ -30,19 +30,19 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <TAPPING_TERM>;
             bindings =  <&mo>, <&kp>;
             display-name = "Layer-Hold";
         };
 
         // Activate modifier if a key is held
-        mt: mod_tap {
+        mh: mod_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            display-name = "Mod-Tap";
+            tapping-term-ms = <TAPPING_TERM>;
+            bindings =  <&kp>, <&kp>;
+            display-name = "Mod-Hold";
         };
 
         magic: magic_hold_tap {
@@ -50,7 +50,7 @@
             label = "MAGIC_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <TAPPING_TERM>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
     };
@@ -156,7 +156,7 @@
             &kp F1                      &kp F2          &kp F3      &kp F4      &kp F5                                                                                                            &kp F6                &kp F7      &kp F8      &kp F9                 &kp F10
             &kp LG(LA(LC(LSHIFT)))      &kp N1          &kp N2      &kp N3      &kp N4              &kp N5                                                                                &kp N6  &kp N7                &kp N8      &kp N9      &kp N0                 &kp MINUS
             &kp LG(LSHIFT)              &kp Q           &kp W       &kp E       &kp R               &kp T                                                                                 &kp Y   &kp U                 &kp I       &kp O       &kp P                  &kp BSLH
-            &kp LMETA                   &mt LEFT_ALT A  &kp S       &mh D       &mt LEFT_CONTROL F  &kp G                                                                                 &kp H   &mt RIGHT_CONTROL J   &kp K       &kp L       &mt RIGHT_ALT SEMI     &kp SQT
+            &kp LMETA                   &mh LEFT_ALT A  &kp S       &kp D       &mh LEFT_CONTROL F  &kp G                                                                                 &kp H   &mh RIGHT_CONTROL J   &kp K       &kp L       &mh RIGHT_ALT SEMI     &kp SQT
             &kp LG(LALT)                &kp Z           &kp X       &kp C       &lh NUMBERS V       &kp B      &kp LSHFT   &kp LCTRL   &kp INSERT   &kp ESCAPE  &kp RCTRL   &kp RSHFT     &kp N   &lh SYMBOLS M         &kp COMMA   &kp DOT     &kp FSLH               &kp PG_UP
             &magic MAGIC 0              &lh MEDIA HOME  &kp END     &kp LEFT    &kp RIGHT                      &kp SPACE   &kp RET     &kp TAB      &kp RALT    &kp DEL     &kp BSPC              &kp UP                &kp DOWN    &kp LBKT    &kp RBKT               &kp PG_DN
             >;
