@@ -46,17 +46,48 @@
     };
 
     combos {
+
         compatible = "zmk,combos";
+
         combo_esc {
             timeout-ms = <COMBO_TERM>;
             key-positions = <37 38>;
             bindings = <&kp ESC>;
             layers   =  <DEFAULT>;
         };
+
         combo_equal {
             timeout-ms = <COMBO_TERM>;
             key-positions = <41 42>;
             bindings = <&kp EQUAL>;
+            layers   =  <DEFAULT>;
+        };
+
+        combo_plus {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <41 43>;
+            bindings = <&kp PLUS>;
+            layers   =  <DEFAULT>;
+        };
+
+        combo_minus {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <41 44>;
+            bindings = <&kp MINUS>;
+            layers   =  <DEFAULT>;
+        };
+
+        combo_mult {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <42 43>;
+            bindings = <&kp ASTERISK>;
+            layers   =  <DEFAULT>;
+        };
+
+        combo_div {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <42 44>;
+            bindings = <&kp SLASH>;
             layers   =  <DEFAULT>;
         };
     };
