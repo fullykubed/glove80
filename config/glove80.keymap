@@ -21,6 +21,7 @@
 // vars
 #define COMBO_TERM 50
 #define TAPPING_TERM 200
+#define QUICK_TAP_TERM 400
 #define LEFT_KEYS 0 1 2 3 4 5 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71
 #define RIGHT_KEYS 6 7 8 9 10 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 79 80
 
@@ -44,6 +45,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
+	    quick-tap-ms = <QUICK_TAP_TERM>;
 	    hold-trigger-key-positions = <RIGHT_KEYS>;
             bindings =  <&kp>, <&kp>;
             display-name = "Mod-Hold-Left";
@@ -55,6 +57,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
+	    quick-tap-ms = <QUICK_TAP_TERM>;
 	    hold-trigger-key-positions = <LEFT_KEYS>;
             bindings =  <&kp>, <&kp>;
             display-name = "Mod-Hold-Right";
@@ -66,7 +69,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <QUICK_TAP_TERM>;
             bindings =  <&kp>, <&kp>;
             display-name = "Mod-Hold-Quick-Tap";
         };
