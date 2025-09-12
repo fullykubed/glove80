@@ -57,7 +57,7 @@
             tapping-term-ms = <TAPPING_TERM>;
 	    hold-trigger-keys-positions = <LEFT_KEYS>;
             bindings =  <&kp>, <&kp>;
-            display-name = "Mod-Hold-Right;
+            display-name = "Mod-Hold-Right";
         };
 
 	
