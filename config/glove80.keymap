@@ -83,7 +83,7 @@
 	swm: sway_move {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = 500;
+            tapping-term-ms = <500>;
             bindings = <&kp LG(LALT)>, <&kp LG(F21)>, <&kp LG(F20)>;
         };
 
