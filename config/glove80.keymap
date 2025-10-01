@@ -43,7 +43,7 @@
         mhl: mod_hold_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <TAPPING_TERM>;
 	    quick-tap-ms = <QUICK_TAP_TERM>;
 	    hold-trigger-key-positions = <RIGHT_KEYS>;
@@ -55,7 +55,7 @@
         mhr: mod_hold_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <TAPPING_TERM>;
 	    quick-tap-ms = <QUICK_TAP_TERM>;
 	    hold-trigger-key-positions = <LEFT_KEYS>;
@@ -64,12 +64,11 @@
         };
 
         // Similar to mh but has quick-tap-mas
-        mhq: mod_hold_quick_tap {
+        shm: shift_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
-            quick-tap-ms = <QUICK_TAP_TERM>;
             bindings =  <&kp>, <&kp>;
             display-name = "Mod-Hold-Quick-Tap";
         };
@@ -84,7 +83,7 @@
 	swm: sway_move {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = 500;
             bindings = <&kp LG(LALT)>, <&kp LG(F21)>, <&kp LG(F20)>;
         };
 
@@ -201,7 +200,7 @@
             &kp LG(LSHIFT)              &kp Q           &kp W       &kp E       &kp R               &kp T                                                                                               &kp Y   &kp U                 &kp I       &kp O       &kp P                  &kp BSLH
             &kp LMETA                   &mhl LEFT_ALT A &kp S       &kp D       &mhl LEFT_CONTROL F &kp G                                                                                               &kp H   &mhr RIGHT_CONTROL J  &kp K       &kp L       &mhr RIGHT_ALT SEMI    &kp SQT
             &swm			&kp Z           &kp X       &kp C       &lh NUMBERS V       &kp B      &shift              &kp LCTRL   &kp INSERT   &kp ESCAPE  &kp RCTRL   &kp RSHFT           &kp N   &lh SYMBOLS M         &kp COMMA   &kp DOT     &kp FSLH               &kp PG_UP
-            &magic MAGIC 0              &lh MEDIA HOME  &kp END     &kp LEFT    &kp RIGHT                      &mhq LSHIFT SPACE   &kp RET     &kp TAB      &kp RALT    &kp DEL     &mhq RSHFT BSPC             &kp UP                &kp DOWN    &kp LBKT    &kp RBKT               &kp PG_DN
+            &magic MAGIC 0              &lh MEDIA HOME  &kp END     &kp LEFT    &kp RIGHT                      &shm LSHIFT SPACE   &kp RET     &kp TAB      &kp RALT    &kp DEL     &shm RSHFT BSPC             &kp UP                &kp DOWN    &kp LBKT    &kp RBKT               &kp PG_DN
             >;
         };
 
