@@ -45,20 +45,20 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <TAPPING_TERM>;
-	    quick-tap-ms = <QUICK_TAP_TERM>;
-	    hold-trigger-key-positions = <RIGHT_KEYS>;
+	        quick-tap-ms = <QUICK_TAP_TERM>;
+	        hold-trigger-key-positions = <RIGHT_KEYS>;
             bindings =  <&kp>, <&kp>;
             display-name = "Mod-Hold-Left";
         };
 
-	// Activate modifier if a key is held
+	    // Activate modifier if a key is held
         mhr: mod_hold_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <TAPPING_TERM>;
-	    quick-tap-ms = <QUICK_TAP_TERM>;
-	    hold-trigger-key-positions = <LEFT_KEYS>;
+	        quick-tap-ms = <QUICK_TAP_TERM>;
+	        hold-trigger-key-positions = <LEFT_KEYS>;
             bindings =  <&kp>, <&kp>;
             display-name = "Mod-Hold-Right";
         };
@@ -69,6 +69,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP_TERM>;
             bindings =  <&kp>, <&kp>;
             display-name = "Mod-Hold-Quick-Tap";
         };
@@ -80,7 +81,7 @@
             bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
         };
 
-	swm: sway_move {
+	    swm: sway_move {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <500>;
