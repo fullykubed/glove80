@@ -109,6 +109,13 @@
             layers   =  <DEFAULT>;
         };
 
+        combo_tab {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <35 38>;
+            bindings = <&kp TAB>;
+            layers   =  <DEFAULT>;
+        };
+
         combo_equal {
             timeout-ms = <COMBO_TERM>;
             key-positions = <41 42>;
